@@ -1,0 +1,22 @@
+.hero {
+  gap: 2rem;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.h1 {
+  text-align: left;
+}
+
+.img-container {
+  margin: 5rem;
+}
+
+.img {
+  width: 100%;
+}
+
+.text {
+  gap: 2rem;
+}

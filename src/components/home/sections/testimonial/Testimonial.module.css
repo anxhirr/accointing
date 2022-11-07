@@ -1,0 +1,22 @@
+.testimonials-container {
+  max-width: 1200px;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tweets-container {
+  display: flex;
+  gap: 1rem;
+}
+
+.arrow-container {
+  cursor: pointer;
+  width: 30px;
+}
+
+.arrow-container svg {
+  width: 100%;
+  height: 100%;
+}

@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+}
+
+.amount {
+  width: 35%;
+}
+
+.amount input {
+  text-align: right;
+}
+
+.currency {
+  position: relative;
+}
+
+.currency svg {
+  position: absolute;
+  right: 0;
+  top: 10px;
+}

@@ -1,0 +1,112 @@
+.content {
+  max-width: 850px;
+  margin-top: 2rem;
+  align-self: center;
+  padding: 1.5rem 3rem;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  gap: 1.5rem;
+  border-radius: 12px;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 10px 0px !important;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.h2 {
+  text-align: left;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.personal {
+  display: grid;
+  grid-template-areas:
+    'first last'
+    'email .';
+  gap: 2.5rem;
+}
+
+.first {
+  grid-area: first;
+}
+
+.last {
+  grid-area: last;
+}
+
+.email {
+  grid-area: email;
+}
+
+/*  */
+
+.settings-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.settings {
+  display: grid;
+  grid-template-areas:
+    'currency language'
+    'password .';
+  gap: 2.5rem;
+}
+
+.currency {
+  grid-area: currency;
+}
+
+.language {
+  grid-area: language;
+}
+
+.password {
+  grid-area: password;
+}
+
+.settings button {
+  width: 50%;
+  min-width: 150px;
+}
+
+/*  */
+
+.delete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1.8rem;
+}
+
+.delete div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 0.9rem;
+}
+
+.submit-btn {
+  border: none;
+  background-color: #dadada;
+  padding: 0.8rem 1.5rem;
+  border-radius: 3rem;
+}
+
+.active-btn {
+  cursor: pointer;
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+}

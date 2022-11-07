@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.h2 {
+  font-size: 30px;
+  font-weight: 700;
+  color: var(--clr-black);
+}
+
+.addnew {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--clr-grey);
+}
+
+.addnew svg {
+  height: 26px;
+  width: 26px;
+}
+
+p {
+  color: var(--clr-grey);
+  font-size: 18px;
+}
+
+.addnew span:hover {
+  text-decoration: underline;
+}
+
+.added-wallets-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}

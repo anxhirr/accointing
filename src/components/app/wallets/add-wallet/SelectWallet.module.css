@@ -1,0 +1,87 @@
+.search-container {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  margin-top: 1rem;
+  position: relative;
+  border: 1px solid #c0c0c0;
+  border-radius: 0.3rem;
+}
+
+.search-container:hover {
+  border: 1px solid #000;
+}
+
+.search-container:focus-within {
+  border: 2px solid #000;
+}
+
+.search-container div {
+  display: flex;
+  width: 100%;
+}
+
+.search-container svg {
+  justify-self: center;
+  align-self: center;
+  width: 2rem;
+  height: 1.4rem;
+  margin: 0 0.4rem;
+}
+
+.search-container label {
+  position: absolute;
+  left: 1rem;
+  top: -0.65rem;
+  z-index: 1;
+  overflow: hidden;
+  background-color: white;
+  color: rgb(74, 74, 74);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 1.4375em;
+  letter-spacing: 0.00938em;
+}
+
+.search-container input {
+  padding: 1.3rem;
+  padding-left: 0;
+  width: 100%;
+  border: none;
+  outline: none;
+}
+
+.clasify {
+  padding: 0.5rem;
+}
+
+.clasify ul {
+  display: flex;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.clasify ul li {
+  padding: 0.3rem 0.8rem;
+  background-color: #e6e6e6;
+  border-radius: 5rem;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.clasify ul li:hover {
+  background-color: #dcdcdc;
+}
+
+.clasify ul li:focus {
+  background-color: #383838;
+}
+
+.exchanges {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+  margin-top: 4px;
+}

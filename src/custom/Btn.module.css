@@ -1,0 +1,19 @@
+.btn {
+  border-radius: 2rem;
+  max-width: 340px;
+  padding: 0.8rem 1.1rem;
+
+  border: none;
+  cursor: pointer;
+  background-color: #363636;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.btn:hover {
+  transition: all 0.5s;
+  background-color: #252525;
+}

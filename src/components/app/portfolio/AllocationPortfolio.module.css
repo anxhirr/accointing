@@ -1,0 +1,75 @@
+.allocation-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-bottom: 5rem;
+}
+
+.allocation {
+  padding: 1rem;
+  border: 1px solid #dee2e6;
+}
+
+.circle {
+  border: 1rem solid #383838;
+  border-radius: 50%;
+  padding: 8rem;
+  margin: 0 3rem;
+  margin-bottom: 3rem;
+}
+
+.h4 {
+  color: inherit;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.allocaion-amount {
+  font-size: 32px;
+  color: inherit;
+  font-weight: 700;
+}
+
+.wallet {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.wallet-btn {
+  font-size: 1rem;
+  font-weight: 700;
+  border-radius: 5px;
+}
+
+.wallet ul {
+  display: flex;
+  justify-content: space-between;
+  list-style: none;
+  padding: 1rem 2rem;
+  background-color: #eeeeee;
+  border: 1px solid #dee2e6;
+}
+
+.wallet-data {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-grow: 1;
+  border: 1px solid #dee2e6;
+  border-top: none;
+}
+
+.wallet-data div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+}
+
+.wallet-img {
+  height: 100px;
+}

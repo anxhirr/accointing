@@ -1,0 +1,90 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(11, 50, 93, 0.4);
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  z-index: 9999;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  padding: 2rem 7rem;
+  align-self: flex-start;
+  background-color: #fafafa;
+  border-radius: 1rem;
+  margin-top: 8vh;
+  max-height: 725px;
+  max-width: 900px;
+  height: 100%;
+  width: 95%;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 0.5rem;
+  flex-grow: 1;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.header h2 {
+  text-align: center;
+  width: 100%;
+
+  font-size: 1.5rem;
+  line-height: 1.334;
+  letter-spacing: 0em;
+  text-align: center;
+  font-weight: 700;
+  color: var(--clr-black);
+}
+
+.header span {
+  display: flex;
+  flex-direction: column;
+}
+
+.header img {
+  height: 50px;
+  width: auto;
+  max-height: 4em;
+}
+
+.btns {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 1rem 0;
+}
+
+.btns button {
+  max-width: 6rem;
+}
+
+.whiteBtn {
+  background-color: #fff;
+  color: black;
+  border: 1px solid black;
+}
+
+.whiteBtn:hover {
+  border: 1px solid #888888;
+  color: #888888;
+  background-color: white;
+}

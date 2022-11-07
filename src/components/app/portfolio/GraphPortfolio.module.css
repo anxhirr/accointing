@@ -1,0 +1,70 @@
+.container {
+  box-shadow: 0 12px 40px rgb(0 0 0 / 12%);
+  background-color: #fff;
+}
+
+.content {
+  padding: 2rem;
+  padding-top: 0;
+}
+
+.header {
+  display: flex;
+  list-style: none;
+  gap: 2rem;
+}
+
+.days {
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.7rem;
+  list-style: none;
+  padding: 0.5rem;
+  padding-right: 0;
+}
+
+.days li {
+  color: var(--clr-grey);
+  cursor: pointer;
+  padding: 0.1rem 0.3rem;
+  border-radius: 0.2rem;
+}
+
+.days li:hover {
+  transition: all 0.5s;
+  background-color: var(--clr-milk);
+}
+
+.focus {
+  background-color: var(--clr-black);
+  color: var(--clr-white);
+}
+
+.main {
+  display: flex;
+}
+
+.graph-container {
+  width: 100%;
+  padding: 1rem;
+}
+
+.graph {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem 0;
+}
+
+.graph img {
+  height: 100px;
+}
+
+.graph button {
+  font-size: 16px;
+  padding: 8px 16px;
+}
+
+.performance {
+  padding: 2rem;
+}

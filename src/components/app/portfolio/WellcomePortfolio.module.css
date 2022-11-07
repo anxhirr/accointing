@@ -1,0 +1,87 @@
+.content {
+  display: grid;
+  justify-items: start;
+  grid-template-areas:
+    "h h h"
+    "button . img"
+    "account wallet img";
+  background-color: #383838;
+  color: #ffffff;
+  gap: 1rem;
+  padding: 2rem;
+}
+
+.wellcome-content h2 {
+  color: #ffffff;
+}
+
+.h1 {
+  color: #ffffff;
+  grid-area: h;
+}
+
+.add {
+  grid-area: button;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.add:hover {
+  text-decoration: underline;
+}
+
+.btn {
+  background-color: #dadada;
+  padding: 0.4rem 1.5rem;
+  border-radius: 999px;
+  font-weight: 500;
+  font-size: 0.875rem;
+  line-height: 1.75;
+}
+
+.account {
+  grid-area: account;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.account div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+  color: var(--clr-white);
+}
+
+.account h2,
+.account p {
+  color: var(--clr-white);
+}
+
+.connect {
+  cursor: pointer;
+  grid-area: wallet;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.connect:hover {
+  text-decoration: underline;
+}
+
+.connect h2,
+.connect p {
+  color: var(--clr-white);
+}
+
+.person {
+  grid-area: img;
+  justify-self: end;
+}

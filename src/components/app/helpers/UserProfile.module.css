@@ -1,0 +1,59 @@
+.container {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  box-shadow: rgb(0 0 0 / 10%) 0px 0px 10px 0px !important;
+  border-radius: 1rem;
+  background-color: #fff;
+  min-width: 190px;
+}
+
+.container ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.container li {
+  display: flex;
+  justify-content: flex-start;
+  padding: 0.5rem 1rem;
+}
+
+.container div {
+  max-width: 20px;
+  margin-right: 10px;
+}
+
+.container svg {
+  width: 100%;
+}
+
+.container a {
+  flex-shrink: 0;
+}
+
+.container select {
+  border: none;
+  width: 75%;
+  margin: 0;
+  padding: 0;
+  flex-shrink: 0;
+}
+
+.container option {
+  font-size: 14px;
+}
+
+.select {
+  outline: none;
+}
+
+.logout a {
+  color: #e58088;
+}
+
+.logout svg {
+  fill: #e58088;
+}

@@ -1,0 +1,69 @@
+.globe {
+  height: 34px;
+  display: flex;
+}
+
+.globe svg {
+  width: 100%;
+  height: 100%;
+}
+
+.flex-space {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.acc-logo {
+  width: 180px;
+  height: 100%;
+}
+
+.nav-mid-ul {
+  list-style: none;
+  gap: 1.5rem;
+}
+
+.nav-mid-ul li {
+  cursor: pointer;
+}
+
+.log-sign-in {
+  gap: 1rem;
+}
+
+.btn {
+  background-color: #fff;
+  border: 0;
+  cursor: pointer;
+}
+
+.sign-up__btn {
+  background-color: #383838;
+  border-radius: 1rem;
+  padding: 0.7rem 1.5rem;
+  color: white;
+}
+
+.logo {
+  height: 22px;
+}
+
+.logo {
+  width: 180px;
+  height: 100%;
+}
+
+.navbar {
+  margin: 1.1rem auto;
+}
+
+.header {
+  position: fixed;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgb(0 0 0 / 20%);
+  background: #f8f8f8;
+  z-index: 10;
+}

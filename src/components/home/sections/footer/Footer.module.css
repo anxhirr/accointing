@@ -1,0 +1,79 @@
+.items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.links-container {
+  display: flex;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+
+.links-container div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: flex-start;
+}
+
+.copyright {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.app-play-socials--container {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 1.5rem;
+  column-gap: 2.5rem;
+}
+
+.social-links img {
+  width: 25px;
+}
+
+.download {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.download a {
+  width: 100%;
+}
+
+.download button {
+  background-color: #82c6ed;
+  border: none;
+  border-radius: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+}
+
+.footer {
+  margin-bottom: 3rem;
+}
+
+.sourceforge-container {
+  display: flex;
+  flex-direction: column;
+  width: 160px;
+}
+
+.img {
+  width: 100%;
+  height: 100%;
+}
+
+.sourceforge {
+  padding: 1.8rem;
+}
