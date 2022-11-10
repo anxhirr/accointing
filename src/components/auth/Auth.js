@@ -1,97 +1,139 @@
 import React, { useState } from 'react';
 import styles from './Auth.module.css';
-import AccointingLogo from '../../images/general/logo-dark.svg';
+
 import BlackBtn from '../../custom/Btn';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useDispatch, useSelector } from 'react-redux';
+import { AuthActions } from '../../store/auth-slice';
+import AuthWrapper from './AuthWrapper';
 
-function Auth() {
-  const [logIn, setLogin] = useState(true);
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
+function Auth({ islogIn, setIsLogin }) {
+  // const [islogIn, setIsLogin] = useState(true);
+  const [enteredEmail, setEnteredEmail] = useState('');
+  const [enteredPassword, setEnteredPassword] = useState('');
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
 
-  const handleSignup = () => {};
-
-  const handleLogin = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+
+    let url = 'https://identitytoolkit.googleapis.com/v1/accounts:';
+
+    islogIn
+      ? (url +=
+          'signInWithPassword?key=AIzaSyDiws-II-792XL4KpJp73lH_6amejcrgx8')
+      : (url += 'signUp?key=AIzaSyDiws-II-792XL4KpJp73lH_6amejcrgx8');
+
+    try {
+      const res = await fetch(url, {
+        method: 'POST',
+        body: JSON.stringify({
+          email: enteredEmail,
+          password: enteredPassword,
+          returnSecureToken: true,
+        }),
+        headers: {
+          'Content-Type': 'application/json',
+        },
+      });
+      if (!res.ok) {
+        const errorData = await res.json();
+        const errorMessage = errorData?.error?.message;
+        throw new Error(errorMessage);
+      }
+
+      const resData = await res.json();
+      const token = resData.idToken;
+
+      dispatch(AuthActions.login(token));
+      navigate('/app');
+    } catch (err) {
+      alert(err.message);
+    }
   };
 
   return (
-    <div className={styles.page}>
-      <main className={styles.container}>
-        <div className={styles.content}>
-          <header className={styles.header}>
-            <span>
-              <img
-                className={styles.img}
-                src={AccointingLogo}
-                alt='Accointing Logo'
-              />
-            </span>
+    // <div className={styles.page}>
+    //   <main className={styles.container}>
+    //     <div className={styles.content}>
+    //       <header className={styles.header}>
+    //         <span>
+    //           <img
+    //             className={styles.img}
+    //             src={AccointingLogo}
+    //             alt='Accointing Logo'
+    //           />
+    //         </span>
 
-            <h2>Welcome</h2>
-            <p>
-              {logIn ? 'Log in' : 'Sign Up'} to ACCOINTING to continue to
-              Accointing.
-            </p>
-          </header>
-          <form className={styles.form}>
-            <div className={styles.input}>
-              <input onChange={(e) => setEmail(e.target.value)} value={email} />
-              <label className={styles.label}>
-                <div className={styles.text}>Email Address</div>
-              </label>
-            </div>
-            <div className={styles.input}>
-              <input
-                onChange={(e) => setPassword(e.target.value)}
-                value={password}
-              />
-              <label className={styles.label}>
-                <div className={styles.text}>Password</div>
-              </label>
-            </div>
-            {logIn && (
-              <div className={styles.forgot}>
-                <Link>Forgot Password?</Link>
-              </div>
-            )}
+    //         <h2>Welcome</h2>
+    //         <p>
+    //           {islogIn ? 'Log in' : 'Sign Up'} to ACCOINTING to continue to
+    //           Accointing.
+    //         </p>
+    //       </header>
 
-            <div className={styles['black-btn-container']}>
-              <BlackBtn
-                classN={styles.blackbtn}
-                onClick={handleSignup}
-                text={logIn ? 'Log in' : 'Sign Up'}
-              />
-            </div>
-
-            <div className='flex-start'>
-              {logIn && (
-                <>
-                  <p>Don't have an account? </p>
-                  <button
-                    className={`btn ${styles.underline}`}
-                    onClick={() => setLogin(false)}
-                  >
-                    Sign up
-                  </button>
-                </>
-              )}
-              {!logIn && (
-                <>
-                  <p>Already have an account?</p>
-                  <button
-                    className={`btn ${styles.underline}`}
-                    onClick={() => setLogin(true)}
-                  >
-                    Log in
-                  </button>
-                </>
-              )}
-            </div>
-          </form>
+    <form className={styles.form}>
+      <div className={styles.input}>
+        <input
+          onChange={(e) => setEnteredEmail(e.target.value)}
+          value={enteredEmail}
+        />
+        <label className={styles.label}>
+          <div className={styles.text}>Email Address</div>
+        </label>
+      </div>
+      <div className={styles.input}>
+        <input
+          onChange={(e) => setEnteredPassword(e.target.value)}
+          value={enteredPassword}
+        />
+        <label className={styles.label}>
+          <div className={styles.text}>Password</div>
+        </label>
+      </div>
+      {islogIn && (
+        <div className={styles.forgot}>
+          <Link>Forgot Password?</Link>
         </div>
-      </main>
-    </div>
+      )}
+
+      <div className={styles['black-btn-container']}>
+        <BlackBtn
+          classN={styles.blackbtn}
+          onClick={handleSubmit}
+          text={islogIn ? 'Log in' : 'Sign Up'}
+        />
+      </div>
+
+      <div className='flex-start'>
+        {islogIn && (
+          <>
+            <p>Don't have an account? </p>
+            <button
+              className={`btn ${styles.underline}`}
+              onClick={() => setIsLogin(false)}
+            >
+              Sign up
+            </button>
+          </>
+        )}
+        {!islogIn && (
+          <>
+            <p>Already have an account?</p>
+            <button
+              className={`btn ${styles.underline}`}
+              onClick={() => setIsLogin(true)}
+            >
+              Log in
+            </button>
+          </>
+        )}
+      </div>
+    </form>
+
+    //     </div>
+    //   </main>
+    // </div>
   );
 }
 

@@ -1,8 +1,8 @@
 import React from 'react';
 import styles from './HeroSection.module.css';
 import { Link } from 'react-router-dom';
-import MyImg from '../../../../images/general/homepageimg.webp';
-import BlackBtn from '../../../../custom/Btn';
+import MyImg from '../../../images/general/homepageimg.webp';
+import BlackBtn from '../../../custom/Btn';
 
 function HeroSection() {
   return (

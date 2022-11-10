@@ -6,7 +6,7 @@ import { RiEarthFill } from 'react-icons/ri';
 import AccointingLogo from '../../images/general/accointing-logo.png';
 import BlackBtn from '../../custom/Btn';
 
-function HomeNavbar() {
+function Navbar() {
   return (
     <header className={styles.header}>
       <div className={`${styles.navbar} container`}>
@@ -35,7 +35,7 @@ function HomeNavbar() {
           </div>
           <div className={`${styles['log-sign-in']} ${styles['flex-space']}`}>
             <div>
-              <Link to='app/portfolio'>
+              <Link to='/auth'>
                 <button className={styles.btn}>Log In</button>
               </Link>
             </div>
@@ -55,4 +55,4 @@ function HomeNavbar() {
   );
 }
 
-export default HomeNavbar;
+export default Navbar;

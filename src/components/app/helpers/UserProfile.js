@@ -4,12 +4,20 @@ import styles from './UserProfile.module.css';
 import { ReactComponent as Language } from '../../../images/portfolio/language.svg';
 import { ReactComponent as ProfileSettings } from '../../../images/portfolio/profile-settings.svg';
 import { ReactComponent as Logout } from '../../../images/portfolio/logout.svg';
+import { useDispatch } from 'react-redux';
+import { AuthActions } from '../../../store/auth-slice';
 
 function UserProfile() {
+  const dispatch = useDispatch();
   const stopPropagation = (e) => {
     e.stopPropagation();
     e.preventDefault();
   };
+
+  const handleLogout = () => {
+    dispatch(AuthActions.logout());
+  };
+
   return (
     <div className={styles.container}>
       <ul>
@@ -37,7 +45,9 @@ function UserProfile() {
           <div>
             <Logout />
           </div>
-          <Link to='../'>Logout</Link>
+          <Link onClick={handleLogout} to='../'>
+            Logout
+          </Link>
         </li>
       </ul>
     </div>
