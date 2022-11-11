@@ -32,19 +32,6 @@
   gap: 1rem;
 }
 
-.btn {
-  background-color: #fff;
-  border: 0;
-  cursor: pointer;
-}
-
-.sign-up__btn {
-  background-color: #383838;
-  border-radius: 1rem;
-  padding: 0.7rem 1.5rem;
-  color: white;
-}
-
 .logo {
   height: 22px;
 }
@@ -66,4 +53,16 @@
   box-shadow: 0 0 10px rgb(0 0 0 / 20%);
   background: #f8f8f8;
   z-index: 10;
+}
+
+@media (max-width: 50em) {
+  .header {
+  }
+  .nav-mid-ul {
+    display: none;
+  }
+
+  .log-sign-in {
+    display: none;
+  }
 }

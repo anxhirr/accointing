@@ -14,7 +14,7 @@ const sponsors = [Bitcoin2go, Cnbs, Cointelegraph, Bloomberg, Forbes, Coindesk];
 function SponsorSection() {
   return (
     <>
-      <div className='container'>
+      <section className='container'>
         <h4>As featured in</h4>
         <div className={`${styles.sponsors} flex-center`}>
           {sponsors.map((s, i) => (
@@ -25,7 +25,7 @@ function SponsorSection() {
             </Link>
           ))}
         </div>
-      </div>
+      </section>
     </>
   );
 }

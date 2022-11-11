@@ -1,0 +1,23 @@
+.join {
+  background-color: rgb(130, 198, 237);
+  min-height: 300px;
+  gap: 2rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.h2 {
+  text-align: center;
+}
+
+.btns {
+  display: flex;
+  gap: 1rem;
+}
+
+.btns a {
+  width: 100%;
+  text-align: center;
+}

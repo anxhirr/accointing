@@ -14,34 +14,11 @@ import SocialLink from './SocialLink';
 import FooterLink from './FooterLink';
 
 const SOCIAL__LINKS = [Twitter, Discord, Youtube, Reddit, Instagram, Linkedin];
-const FOOTER__LINKS_DATA = [
-  { header: 'Accointing', linkText: ['Blog', 'Careers', 'Help', 'Community'] },
-  {
-    header: 'Explore',
-    linkText: [
-      'Integrations',
-      'Crypto Tracker',
-      'Crypto Tax Calculator',
-      'For Accountants',
-      'Pricing',
-    ],
-  },
-  {
-    header: 'Resources',
-    linkText: [
-      'Crypto 101 Guide',
-      'Crypto Tax Guide',
-      'Privacy Notice',
-      'Imprint',
-      'Terms',
-    ],
-  },
-];
 
 function Footer() {
   return (
     <footer className={`${styles.footer} container`}>
-      <div className={styles.items}>
+      <div className={styles.content}>
         <div className={styles['sourceforge-container']}>
           <a>
             <span>
@@ -57,9 +34,7 @@ function Footer() {
             </span>
           </a>
         </div>
-        <div className={styles['links-container']}>
-          <FooterLink data={FOOTER__LINKS_DATA} />
-        </div>
+        <FooterLink />
         <div className={styles['app-play-socials--container']}>
           <div className={styles.download}>
             <a>

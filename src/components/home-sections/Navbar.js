@@ -4,17 +4,16 @@ import { Link } from 'react-router-dom';
 import { AiOutlineArrowDown } from 'react-icons/ai';
 import { RiEarthFill } from 'react-icons/ri';
 import AccointingLogo from '../../images/general/accointing-logo.png';
-import BlackBtn from '../../custom/Btn';
 
 function Navbar() {
   return (
     <header className={styles.header}>
-      <div className={`${styles.navbar} container`}>
-        <div className={` navbar ${styles['flex-space']}`}>
-          <div className={styles.logo}>
+      <nav className={`${styles.navbar} container`}>
+        <ul className={` navbar ${styles['flex-space']}`}>
+          <li className={styles.logo}>
             <img className={styles.logo} src={AccointingLogo} />
-          </div>
-          <div>
+          </li>
+          <li>
             <ul className={`${styles['nav-mid-ul']} ${styles['flex-space']}`}>
               <li>
                 <span>Features</span>
@@ -32,25 +31,25 @@ function Navbar() {
                 <span>Pricing</span>
               </li>
             </ul>
-          </div>
-          <div className={`${styles['log-sign-in']} ${styles['flex-space']}`}>
+          </li>
+          <li className={`${styles['log-sign-in']} ${styles['flex-space']}`}>
             <div>
-              <Link to='/auth'>
-                <button className={styles.btn}>Log In</button>
+              <Link to='/auth/log-in'>
+                <button className='btn btn-black'>Log In</button>
               </Link>
             </div>
             <div>
-              <Link to='/auth'>
-                <BlackBtn text='Sign up' />
+              <Link to='/auth/sign-up'>
+                <button className='btn'>Sign Up</button>
               </Link>
             </div>
             <div className={`${styles.globe} ${styles.btn} `}>
               <RiEarthFill />
               <AiOutlineArrowDown />
             </div>
-          </div>
-        </div>
-      </div>
+          </li>
+        </ul>
+      </nav>
     </header>
   );
 }

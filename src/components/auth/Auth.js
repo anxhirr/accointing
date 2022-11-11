@@ -46,32 +46,13 @@ function Auth({ islogIn, setIsLogin }) {
       const token = resData.idToken;
 
       dispatch(AuthActions.login(token));
-      navigate('/app');
+      navigate('/app/portfolio');
     } catch (err) {
       alert(err.message);
     }
   };
 
   return (
-    // <div className={styles.page}>
-    //   <main className={styles.container}>
-    //     <div className={styles.content}>
-    //       <header className={styles.header}>
-    //         <span>
-    //           <img
-    //             className={styles.img}
-    //             src={AccointingLogo}
-    //             alt='Accointing Logo'
-    //           />
-    //         </span>
-
-    //         <h2>Welcome</h2>
-    //         <p>
-    //           {islogIn ? 'Log in' : 'Sign Up'} to ACCOINTING to continue to
-    //           Accointing.
-    //         </p>
-    //       </header>
-
     <form className={styles.form}>
       <div className={styles.input}>
         <input
@@ -130,10 +111,6 @@ function Auth({ islogIn, setIsLogin }) {
         )}
       </div>
     </form>
-
-    //     </div>
-    //   </main>
-    // </div>
   );
 }
 

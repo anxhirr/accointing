@@ -12,7 +12,7 @@ function App() {
       {!isLoggedIn && (
         <>
           <Route path='/' element={<HomePage />} />
-          <Route path='/auth' element={<AuthPage />} />
+          <Route path='/auth/*' element={<AuthPage />} />
         </>
       )}
       {isLoggedIn && <Route path='/app/*' element={<Application />} />}

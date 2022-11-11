@@ -1,0 +1,29 @@
+.features {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+  gap: 1rem;
+}
+
+@media (max-width: 50em) {
+  .features {
+    grid-template-columns: 1fr;
+  }
+
+  .features > :nth-child(3) {
+    grid-row: 4;
+  }
+
+  .features > :nth-child(7) {
+    grid-row: 8;
+  }
+
+  .features h2 {
+    text-align: center;
+  }
+}
+
+.h4 {
+  text-align: center;
+  padding: 1rem 0;
+}

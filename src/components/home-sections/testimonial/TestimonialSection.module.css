@@ -1,9 +1,19 @@
+.h4 {
+  text-align: center;
+}
+
 .testimonials-container {
   max-width: 1200px;
   height: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+@media (max-width: 50em) {
+  .testimonials-container {
+    display: none;
+  }
 }
 
 .tweets-container {
